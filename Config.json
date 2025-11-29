@@ -2,7 +2,7 @@
     "jar_info": {
         "min_ram": "2G",
         "max_ram": "8G",
-        "jar_name": "FabricServer",
+        "jar_name": "ServerJar",
         "other_args": [
             "-XX:+UseG1GC",
             "-XX:+ParallelRefProcEnabled",
@@ -14,23 +14,23 @@
     },
     "state_styles": {
         "starting": {
-            "title": "Starting BC.Non.E. Server",
+            "title": "Starting",
             "color": "yellow"
         },
         "running": {
-            "title": "Running BC.Non.E. Server",
+            "title": "Running",
             "color": "green"
         },
         "stopping": {
-            "title": "Stopping BC.Non.E. Server",
+            "title": "Stopping",
             "color": "yellow"
         },
         "stopped": {
-            "title": "Stopped BC.Non.E. Server",
+            "title": "Stopped",
             "color": "red"
         },
         "idle": {
-            "title": "Pausing BC.Non.E. Server (Idle)",
+            "title": "Paused",
             "color": "darkgray"
         }
     },
@@ -40,5 +40,10 @@
     "sneaky_bans": {
         "players": ["Herobrine", "Entity303"],
         "ips": []
+    },
+    "server_resource_pack": {
+        "path": "resources/resource_pack.zip",
+        "ip": "",
+        "port": 51823
     }
 }

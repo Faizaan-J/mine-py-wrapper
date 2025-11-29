@@ -12,6 +12,7 @@ from Events import Event
 import HandleState
 import HandleSneakyBans
 import HandleStateStyles
+import HandleServerResourcePack
 
 load_dotenv()
 
