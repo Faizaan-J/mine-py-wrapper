@@ -33,6 +33,17 @@ def start_resource_pack_server():
             def log_message(self, format, *args):
                 log_message(Logger.LogLevel.INFO, args)
 
+            def handle(self):
+                full_ip = f"{self.client_address[0]}:{self.client_address[1]}"
+                self.connection = self.request
+                first_few_bytes = self.connection.recv(3, socketserver.socket.MSG_PEEK)
+                if (len(first_few_bytes) >= 3 and first_few_bytes[0] == 0x16 and first_few_bytes[1] == 0x03 and (first_few_bytes[2] in (0x00, 0x01, 0x02, 0x03))): # hopefully this works idk apparently this is what an https handshake looks like
+                    log_message(Logger.LogLevel.WARNING, f"Rejected connection from {full_ip} for attempting to do an HTTPS handshake on HTTP server.")
+                    self.connection.sendall(b"HTTP/1.1 400 Bad Request\r\nContent-Length: 0\r\nAttempted to do HTTPS Handshake on HTTP port.\r\n\r\n")
+                    self.connection.close()
+                    return
+                return super().handle()
+
             def do_GET(self):
                 with open(pack_path, 'rb') as f:
                     self.send_response(200)
