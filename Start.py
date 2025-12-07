@@ -42,12 +42,6 @@ server_process = subprocess.Popen(
     errors="replace"
 )
 
-def on_state_change(new_state: HandleState.State):
-    if new_state == HandleState.State.RUNNING:
-        threading.Thread(target=HandleSneakyBans.handle_sneaky_ban, daemon=True).start()
-        HandleState.OnStateChange.unsubscribe(on_state_change)
-HandleState.OnStateChange.subscribe(on_state_change)
-
 for line in server_process.stdout:
     print(line, end='')
     HandleState.update_state_from_line(line)

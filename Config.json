@@ -13,35 +13,45 @@
         ]
     },
     "state_styles": {
-        "starting": {
-            "title": "Starting",
-            "color": "yellow"
+        "feature_enabled": {
+            "enabled": true,
+            "title": true,
+            "false": true
         },
-        "running": {
-            "title": "Running",
-            "color": "green"
-        },
-        "stopping": {
-            "title": "Stopping",
-            "color": "yellow"
-        },
-        "stopped": {
-            "title": "Stopped",
-            "color": "red"
-        },
-        "idle": {
-            "title": "Paused",
-            "color": "darkgray"
+        "auto_generate": false,
+        "styles": {
+            "starting": {
+                "title": "Starting",
+                "color": "yellow"
+            },
+            "running": {
+                "title": "Running",
+                "color": "green"
+            },
+            "stopping": {
+                "title": "Stopping",
+                "color": "yellow"
+            },
+            "stopped": {
+                "title": "Stopped",
+                "color": "red"
+            },
+            "idle": {
+                "title": "Paused",
+                "color": "darkgray"
+            }
         }
     },
     "network_info": {
         
     },
     "sneaky_bans": {
+        "feature_enabled": false,
         "players": ["Herobrine", "Entity303"],
         "ips": []
     },
     "server_resource_pack": {
+        "feature_enabled": false,
         "path": "resources/resource_pack.zip",
         "ip": "",
         "port": 51823

@@ -74,4 +74,6 @@ def start_resource_pack_server():
 
     threading.Thread(target=run, daemon=True).start()
 
-start_resource_pack_server()
+feature_enabled = ConfigHandler.config["server_resource_pack"].get("feature_enabled", False)
+if feature_enabled:
+    start_resource_pack_server()
