@@ -1,5 +1,5 @@
 {
-    "jar_info": {
+    "server": {
         "min_ram": "2G",
         "max_ram": "8G",
         "jar_name": "ServerJar",

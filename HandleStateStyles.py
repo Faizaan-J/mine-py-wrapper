@@ -35,8 +35,8 @@ def auto_generate():
 
 def on_state_change(new_state: HandleState.State):
     state_styles = ConfigHandler.config["state_styles"].get("styles", auto_generate())
-    title_enabled = ConfigHandler.config["state_styles"]["feature_enabled"]["title"].get("enabled", True)
-    color_enabled = ConfigHandler.config["state_styles"]["feature_enabled"]["color"].get("enabled", True)
+    title_enabled = ConfigHandler.config["state_styles"]["feature_enabled"].get("title", True)
+    color_enabled = ConfigHandler.config["state_styles"]["feature_enabled"].get("color", True)
 
     if title_enabled:
         set_title(state_styles[new_state.value]["title"])

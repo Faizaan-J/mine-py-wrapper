@@ -17,16 +17,16 @@ import HandleServerResourcePack
 load_dotenv()
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-jar_path = os.path.join(script_dir, "..", f"{ConfigHandler.config['jar_info']['jar_name']}.jar")
+jar_path = os.path.join(script_dir, "..", f"{ConfigHandler.config['server']['jar_name']}.jar")
 
 java_args = [
     "java",
-    f"-Xms{ConfigHandler.config['jar_info']['min_ram']}",
-    f"-Xmx{ConfigHandler.config['jar_info']['max_ram']}",
+    f"-Xms{ConfigHandler.config['server']['min_ram']}",
+    f"-Xmx{ConfigHandler.config['server']['max_ram']}",
 ]
 
-if "other_args" in ConfigHandler.config['jar_info']:
-    java_args.extend(ConfigHandler.config['jar_info']['other_args'])
+if "other_args" in ConfigHandler.config['server']:
+    java_args.extend(ConfigHandler.config['server']['other_args'])
 
 java_args.extend([
     "-jar", jar_path, "nogui"
