@@ -8,7 +8,7 @@ import Logger
 
 def start_resource_pack_server():
     def log_message(level: Logger.LogLevel, *args):
-        Logger.Log(level, f"CDN: {' '.join(str(arg) for arg in args)}")
+        Logger.Log(level, f"Resource Pack Server: {' '.join(str(arg) for arg in args)}")
 
     server_resource_pack = ConfigHandler.config["server_resource_pack"]
 

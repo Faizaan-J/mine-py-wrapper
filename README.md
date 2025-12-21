@@ -15,7 +15,7 @@ Of course, you can still definitely use your favorite mods or plugins along with
   when they join, they get kicked with a fake error message (e.g., “Connection timed out: getsockopt”). Perfect for keeping out that one person who thinks
   that they got away with X-raying.
 - A Logger: A script that has a function that prints out messages in a similar style to Minecraft console commands. For example, a Minecraft log may look like this: `[18:06:09] [Server thread/INFO]: Preparing level "world"`. The logger mimics this style and looks something like this: `[18:05:56] [MinePyWrapper/INFO] Test Message!`.
-- Server Resource Pack CDN: A small built-in HTTP CDN server to host a server resource pack without an external site.
+- Resource Pack Server: A small built-in HTTP server to host a server resource pack without an external site.
 
 ## Future Features
 - Google Drive Integration: Let the owner log into their google account to allow the world file to be saved on the cloud when the server stops along with being able to have past backups of the world.
