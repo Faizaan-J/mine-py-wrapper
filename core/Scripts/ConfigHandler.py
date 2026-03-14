@@ -1,8 +1,8 @@
 import os
 import json
 
-config_json = os.path.join(os.path.dirname(__file__), "config.json")
-server_properties_file = os.path.join(os.path.dirname(__file__), "../server.properties")
+config_json = os.path.join("minepywrapper", "config.json")
+server_properties_file = "server.properties"
 config = None
 
 def get_server_property(key: str) -> str | None:

@@ -25,22 +25,26 @@ Of course, you can still definitely use your favorite mods or plugins along with
 - Custom Commands: Add your own admin commands that can trigger multiple Minecraft commands or even run Python code. Still being thought out as there are challenges around handling unregistered commands and whether these should integrate with datapacks or stay console-only.
 
 ## Installation Guide
-There is currently not a proper installation but this is it for now:
-1. Inside of the folder with the server jar, create a folder named `StartScripts`
-2. Clone all of the scripts into `StartScripts`
-3. Edit Config.json and rename `"jar_info"/"jar_name"` to the name of the server jar (without the .jar extension).
-   You can edit everything else to your liking such as the minimum ram, maximum ram, other arguments, console styles, sneaky bans, and more.
-4. Inside of the folder with the server jar, create a `.bat` file and name it whatever you want.
-5. Insert this inside of the `.bat` file and save:
-   ```
-   python StartScripts/Start.py
-   PAUSE
-   ```
-6. Install python at [https://www.python.org/](https://www.python.org/)
-7. Install the following pip packages
-   - `pip install dotenv`
-   - `pip install mcipc`
-8. To run the server, run the `.bat` file.
+There currently is no proper installer but this is temporary:
+1. Install python at [https://www.python.org/](https://www.python.org/).
+2. Download from releases.
+3. Move core into `%LOCALAPPDATA%/Programs/MinePyWrapper` or wherever you like.
+4. Inside of the core folder, create the python environment:
+```
+python -m venv .venv
+```
+5. Then after it's done, activate the environment:
+```
+.\.venv\Scripts\Activate
+```
+6. Lastly, download the packages:
+```
+pip install -r requirements.txt
+```
+7. Inside of the root of your Minecraft server, paste the folder `server/minepywrapper` into it and paste the file `server/Start.bat`
+8. Configure `minepywrapper/Config.json` and set `server/jar_name` to the name of your jar file.
+9. Edit the `Start.bat` if you placed the core somewhere else or named the environment differently.
+10. To run the server, run the `.bat` file.
 
 ## License
 MinePyWrapper is released under the MIT License.  
