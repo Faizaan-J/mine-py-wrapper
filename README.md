@@ -28,8 +28,8 @@ Of course, you can still definitely use your favorite mods or plugins along with
 There currently is no proper installer but this is temporary:
 1. Install python at [https://www.python.org/](https://www.python.org/).
 2. Download from releases.
-3. Move core into `%LOCALAPPDATA%/Programs/MinePyWrapper` or wherever you like.
-4. Inside of the core folder, create the python environment:
+3. Move core into `%LOCALAPPDATA%\Programs\MinePyWrapper` or wherever you like.
+4. Open a terminal inside of the core folder and create a python environment:
 ```
 python -m venv .venv
 ```
