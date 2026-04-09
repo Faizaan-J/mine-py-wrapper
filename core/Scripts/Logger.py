@@ -3,7 +3,7 @@ from enum import Enum
 
 import inspect
 
-prefix = "MinePyWrapper"
+prefix = "MineStrapper"
 
 class LogLevel(Enum):
     INFO = "INFO"

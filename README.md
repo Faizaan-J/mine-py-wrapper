@@ -1,8 +1,8 @@
-# MinePyWrapper
+# MineStrapper
 <p align="center">
-  <img width="150" height="150" alt="MinePyWrapperLogoPlaceholder" src="https://github.com/user-attachments/assets/38e8f391-5c0e-460a-9f05-ea9bc74ebf33" />
+  <img width="150" height="150" alt="MineStrapperLogoPlaceholder" src="https://github.com/user-attachments/assets/38e8f391-5c0e-460a-9f05-ea9bc74ebf33" />
 </p>
-<p align="center">MinePyWrapper is a Python wrapper for running and extending features in a Minecraft <i>Java Edition</i> server.</p>
+<p align="center">MineStrapper is a Python wrapper for running and extending features in a Minecraft <i>Java Edition</i> server.</p>
 
 Instead of writing full Java plugins or mods, this lets you hook into the server’s state/lifecycle events (starting, running, idle, stopping, stopped) and add custom functionality directly in Python. 
 This means simple features you want to add don't require the overhead of a mod loader (fabric, forge) or a plugin loader (paper, spigot, bukkit) and you can keep the server in its vanilla form.
@@ -14,7 +14,7 @@ Of course, you can still definitely use your favorite mods or plugins along with
 - Sneaky Bans: An example of how you can extend the server with custom features. Instead of banning players in the usual way (which makes it obvious),
   when they join, they get kicked with a fake error message (e.g., “Connection timed out: getsockopt”). Perfect for keeping out that one person who thinks
   that they got away with X-raying.
-- A Logger: A script that has a function that prints out messages in a similar style to Minecraft console commands. For example, a Minecraft log may look like this: `[18:06:09] [Server thread/INFO]: Preparing level "world"`. The logger mimics this style and looks something like this: `[18:05:56] [MinePyWrapper/INFO] Test Message!`.
+- A Logger: A script that has a function that prints out messages in a similar style to Minecraft console commands. For example, a Minecraft log may look like this: `[18:06:09] [Server thread/INFO]: Preparing level "world"`. The logger mimics this style and looks something like this: `[18:05:56] [MineStrapper/INFO] Test Message!`.
 - Resource Pack Server: A small built-in HTTP server to host a server resource pack without an external site.
 
 ## Future Features
@@ -28,7 +28,7 @@ Of course, you can still definitely use your favorite mods or plugins along with
 There currently is no proper installer but this is temporary:
 1. Install python at [https://www.python.org/](https://www.python.org/).
 2. Download from releases.
-3. Move core into `%LOCALAPPDATA%\Programs\MinePyWrapper` or wherever you like.
+3. Move core into `%LOCALAPPDATA%\Programs\MineStrapper` or wherever you like.
 4. Open a terminal inside of the core folder and create a python environment:
 ```
 python -m venv .venv
@@ -41,11 +41,11 @@ python -m venv .venv
 ```
 pip install -r requirements.txt
 ```
-7. Inside of the root of your Minecraft server, paste the folder `server/minepywrapper` into it and paste the file `server/Start.bat`
-8. Configure `minepywrapper/Config.json` and set `server/jar_name` to the name of your jar file.
+7. Inside of the root of your Minecraft server, paste the folder `server/minestrapper` into it and paste the file `server/Start.bat`
+8. Configure `minestrapper/Config.json` and set `server/jar_name` to the name of your jar file.
 9. Edit the `Start.bat` if you placed the core somewhere else or named the environment differently.
 10. To run the server, run the `.bat` file.
 
 ## License
-MinePyWrapper is released under the MIT License.  
+MineStrapper is released under the MIT License.  
 Feel free to use, modify, and share.

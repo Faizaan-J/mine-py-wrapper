@@ -1,7 +1,7 @@
 import os
 import json
 
-config_json = os.path.join("minepywrapper", "config.json")
+config_json = os.path.join("minestrapper", "config.json")
 server_properties_file = "server.properties"
 config = None
 
