@@ -13,7 +13,7 @@
       "required": [
         "min_ram",
         "max_ram",
-        "jar_name"
+        "server_jar"
       ],
       "properties": {
         "min_ram": {
@@ -28,10 +28,10 @@
           "default": "2G",
           "x-placeholder": "e.g. 512M, 1G, 2G"
         },
-        "jar_name": {
+        "server_jar": {
           "type": "string",
-          "description": "Server .jar file name without extension.",
-          "x-placeholder": "Server Name Here.jar"
+          "description": "Path to the server .jar, either absolute or relative to the server root.",
+          "x-file": { "extensions": ["jar"] }
         },
         "other_args": {
           "type": "array",
@@ -171,8 +171,8 @@
         },
         "path": {
           "type": "string",
-          "description": "Path to the resource pack ZIP file relative to the server directory.",
-          "x-placeholder": "e.g. resourcepacks/my_pack.zip"
+          "description": "Path to the resource pack ZIP file, either absolute of relative to the server root.",
+          "x-file": { "extensions": ["zip"] }
         },
         "ip": {
           "type": "string",
